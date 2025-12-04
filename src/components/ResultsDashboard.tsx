@@ -2,10 +2,10 @@ import { ArrowLeft, Sparkles, ShoppingBag, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ExerciseCard } from '@/components/ExerciseCard';
 import { ProductCard } from '@/components/ProductCard';
+import AICoachCard from '@/components/AICoachCard';
 import { useUserProfile } from '@/store/userProfile';
 import { getFilteredExercises } from '@/data/exercises';
 import { getRecommendedProducts } from '@/data/products';
-
 interface ResultsDashboardProps {
   onRestart: () => void;
 }
@@ -76,6 +76,9 @@ export function ResultsDashboard({ onRestart }: ResultsDashboardProps) {
           </div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         </section>
+
+        {/* AI Coach Section */}
+        <AICoachCard />
 
         {/* Exercises Section */}
         <section className="space-y-6">
