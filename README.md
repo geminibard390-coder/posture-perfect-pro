@@ -16,13 +16,13 @@ Make sure you have the following installed:
 Open your terminal or command prompt and run:
 
 ```bash
-git clone <YOUR_GIT_URL>
+git clone https://github.com/geminibard390-coder/posture-perfect-pro.git
 ```
 
 **2. Navigate to the project directory**
 
 ```bash
-cd <YOUR_PROJECT_NAME>
+cd posture-perfect-pro
 ```
 
 **3. Install Dependencies**
