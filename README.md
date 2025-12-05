@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
 
-## Project info
+## 🚀 Getting Started
 
-**URL**: https://lovable.dev/projects/1306adee-0c1e-4029-a07c-fbe822cb51f9
+Follow these steps to run the project locally on your machine.
 
-## How can I edit this code?
+### Prerequisites
 
-There are several ways of editing your application.
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/) & npm (Node Package Manager)
+- [Git](https://git-scm.com/)
 
-**Use Lovable**
+### Installation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1306adee-0c1e-4029-a07c-fbe822cb51f9) and start prompting.
+**1. Clone the repository**
 
-Changes made via Lovable will be committed automatically to this repo.
+Open your terminal or command prompt and run:
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
 git clone <YOUR_GIT_URL>
+```
 
-# Step 2: Navigate to the project directory.
+**2. Navigate to the project directory**
+
+```bash
 cd <YOUR_PROJECT_NAME>
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+**3. Install Dependencies**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
+```
+*(Note: This project also contains a `bun.lockb` file. If you prefer using Bun, you can run `bun install` instead).*
+
+**4. Configure Environment Variables**
+
+Since this project uses Supabase, you may need to set up your environment variables.
+1. Create a file named `.env` in the root directory.
+2. Add your necessary API keys (e.g., `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`).
+
+**5. Start the Development Server**
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Once the server starts, open your browser and navigate to the local URL provided (usually `http://localhost:8080` or `http://localhost:5173`).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Building for Production
 
-**Use GitHub Codespaces**
+To create an optimized production build, run:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+This will generate a `dist` folder containing the compiled files ready for deployment.
 
-This project is built with:
+## ☁️ Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+You can deploy this project to any static hosting provider. Recommended options include:
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1306adee-0c1e-4029-a07c-fbe822cb51f9) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **Netlify:** Connect your GitHub repository and set the build command to `npm run build` and the publish directory to `dist`.
+- **Vercel:** Import your project; Vercel usually detects Vite settings automatically.
